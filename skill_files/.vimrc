@@ -461,6 +461,8 @@ map <leader>rs :source my.vim<cr> :rviminfo my.viminfo<cr>
 
 " 替换Esc键位置
 inoremap <c-t> <esc>
+nnoremap <c-t> <esc>
+vnoremap <c-t> <esc>
 
 " 编辑时光标移动
 inoremap <c-h> <left>
