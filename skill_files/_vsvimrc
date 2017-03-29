@@ -8,3 +8,24 @@ inoremap <c-h> <left>
 inoremap <c-l> <right>
 inoremap <c-k> <up>
 inoremap <c-j> <down>
+
+" 不要使用vi的键盘模式，而是vim自己的
+set nocompatible
+" 去掉输入错误的提示声音
+set noeb
+" 在处理未保存或只读文件的时候，弹出确认
+set confirm
+" 自动缩进
+set autoindent
+set cindent
+" Tab键的宽度
+set tabstop=4
+" 统一缩进为4
+set softtabstop=4
+set shiftwidth=4
+" 用空格代替制表符
+set expandtab
+" 在行和段开始处使用制表符
+"set smarttab
+" 历史记录数
+set history=1000
