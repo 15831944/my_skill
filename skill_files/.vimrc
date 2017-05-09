@@ -103,10 +103,10 @@ set confirm
 set autoindent
 set cindent
 " Tab键的宽度
-set tabstop=4
-" 统一缩进为4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+" 统一缩进为2
+set softtabstop=2
+set shiftwidth=2
 " 用空格代替制表符
 set expandtab
 " 在行和段开始处使用制表符
@@ -233,6 +233,7 @@ endif
 nmap <F5> :NERDTreeToggle<cr>
 
 " YouCompleteMe
+set completeopt=longest,menu
 set runtimepath+=~/.vim/bundle/YouCompleteMe
 let g:ycm_collect_identifiers_from_tags_files = 1           " 开启 YCM 基于标签引擎
 let g:ycm_collect_identifiers_from_comments_and_strings = 1 " 注释与字符串中的内容也用于补全
@@ -252,6 +253,12 @@ nnoremap <c-g> :YcmCompleter GoToDefinitionElseDeclaration<CR>|     " 跳转到�
 let g:ycm_min_num_of_chars_for_completion=9999                " 从第3个键入字符就开始罗列匹配项
 let g:ycm_key_invoke_completion='<C-Space>'
 
+"上下左右键的行为 会显示其他信息
+inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
+inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+
 set tags+=/usr/include/tags
 
 let g:ycm_filetype_blacklist = {
@@ -268,7 +275,7 @@ let g:ycm_filetype_blacklist = {
       \}
 
 "syntastic
-let g:syntastic_check_on_open=1
+let g:syntastic_check_on_open=0
 let g:syntastic_check_on_wq=1
 let g:syntastic_enable_highlighting=1
 let g:syntastic_python_checkers=['pyflakes'] " 使用pyflakes,速度比pylint快
@@ -278,10 +285,10 @@ highlight SyntasticErrorSign guifg=white guibg=black" 修改高亮的背景色, 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height = 5
-let g:syntastic_error_symbol = 'EE'
-let g:syntastic_style_error_symbol = 'E>'
-let g:syntastic_warning_symbol = 'WW'
-let g:syntastic_style_warning_symbol = 'W>'
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_style_error_symbol = '✗>'
+let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_style_warning_symbol = '⚠>'
 
 let g:syntastic_cpp_compiler = 'g++'
 let g:syntastic_cpp_compiler_options = '-std=c++11'
@@ -295,7 +302,8 @@ function! ToggleErrors()
 		Errors
 	endif
 endfunction
-nnoremap <Leader>s :call ToggleErrors()<cr>
+nnoremap <leader>n : SyntasticReset<cr>
+nnoremap <leader>s :call ToggleErrors()<cr>
 " nnoremap <Leader>sn :lnext<cr>
 " nnoremap <Leader>sp :lprevious<cr>
 
