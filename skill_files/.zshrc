@@ -109,10 +109,23 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias hp="http_proxy=http://localhost:8123"
 
-JAVA_HOME=/usr/lib/jvm/java-8-oracle
-JRE_HOME=/usr/lib/jvm/java-8-oracle
-PATH=$JAVA_HOME/bin:$PATH
-CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-export JAVA_HOME
-export PATH
-export CLASSPATH
+alias wiz-note="WizNote </dev/null &>/dev/null &"
+alias su-nautilus="sudo nautilus"
+alias su-baobab="sudo baobab"
+alias su-gparted="sudo gparted"
+
+# JAVA_HOME=/usr/lib/jvm/java-8-oracle
+# JRE_HOME=/usr/lib/jvm/java-8-oracle
+# PATH=$JAVA_HOME/bin:$PATH
+# CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+# export JAVA_HOME
+# export PATH
+# export CLASSPATH
+
+# python path
+# export PYTHONPATH=$PYTHONPATH:/usr/lib/python2.7/dist-packages
+# export PYTHONPATH=$PYTHONPATH:/home/kevins/.local/lib/python2.7/dist-packages
+# 
+
+# qt lib path
+export LD_LIBRARY_PATH=/opt/Qt5.7.0/5.7/gcc_64/lib
