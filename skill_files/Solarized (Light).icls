@@ -1,10 +1,10 @@
 <scheme name="Solarized (Light)" version="142" parent_scheme="Default">
   <option name="FONT_SCALE" value="1.0" />
   <metaInfo>
-    <property name="created">2018-08-21T11:34:54</property>
+    <property name="created">2018-08-24T18:03:41</property>
     <property name="ide">Python</property>
     <property name="ideVersion">2017.3.4.0.0</property>
-    <property name="modified">2018-08-21T11:34:56</property>
+    <property name="modified">2018-08-24T18:03:43</property>
     <property name="originalScheme">Solarized (Light)</property>
   </metaInfo>
   <option name="LINE_SPACING" value="1.1" />
@@ -13,9 +13,10 @@
   <colors>
     <option name="CARET_COLOR" value="95b8a5" />
     <option name="CARET_ROW_COLOR" value="d8e9ee" />
-    <option name="CONSOLE_BACKGROUND_KEY" value="fdf6e3" />
-    <option name="GUTTER_BACKGROUND" value="f3f8f8" />
-    <option name="INDENT_GUIDE" value="93eaa2" />
+    <option name="CONSOLE_BACKGROUND_KEY" value="EFF4F4" />
+    <option name="GUTTER_BACKGROUND" value="eff4f4" />
+    <option name="INDENT_GUIDE" value="eff4f4" />
+    <option name="INFORMATION_HINT" value="ede4d4" />
     <option name="LINE_NUMBERS_COLOR" value="819090" />
     <option name="NOTIFICATION_BACKGROUND" value="cbffe1" />
     <option name="SELECTION_BACKGROUND" value="75a2a8" />
@@ -1105,7 +1106,7 @@
     <option name="TEXT">
       <value>
         <option name="FOREGROUND" value="212375" />
-        <option name="BACKGROUND" value="faffff" />
+        <option name="BACKGROUND" value="eff4f4" />
       </value>
     </option>
     <option name="TEXT_SEARCH_RESULT_ATTRIBUTES">
